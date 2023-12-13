@@ -1,35 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class ArrayExercise1
+namespace ConsoleApp1
 {
-
-    static void Main()
+     class Program
     {
 
-
-        int[] array = { 199, 5, 7, 28, 4, 38, 3, 1 };
-        Array.Sort(array);
-        int dimension = array.Length;
-        Console.WriteLine("dimension:" + dimension);
-        Console.Write("Elements: ");
-        for (int i = 0; i < array.Length; i++)
+        static void Main(string[] args)
         {
-            Console.Write(array[i]);
-            if (i < array.Length - 1)
-            {
-                Console.Write(",");
-            }
+            ArrayExercise1 arrayExercise1 = new ArrayExercise1();
+            arrayExercise1.arrayInt();
+
+
+            ArrayExercise2 arrayExercise2 = new ArrayExercise2();
+            String[] stringFive = { "Volvo", "BMW", "Mercedes", "Dacia", "Hummer" };
+            String[] stringTen = { "Mar", "Para", "Pruna", "Portocala", "Capsuna", "Piersica", "Kiwi", "Clementina", "Agude","Caisa"};
+            arrayExercise2.arrayStringMax(stringTen);
+            arrayExercise2.arrayStringMin(stringTen);
+            arrayExercise2.arrayStringMax(stringFive);
+            arrayExercise2.arrayStringMin(stringFive);
         }
-        Console.WriteLine();
-        Console.WriteLine("first element" + array[0]);
-        int lastElement = array.Length - 1;
-        Console.WriteLine("last element" + array[lastElement]);
-
-
-
-
-
-
     }
-
 }
